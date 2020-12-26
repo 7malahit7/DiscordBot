@@ -1,1 +1,1 @@
-worker: run worker.bat
+worker: worker.bat
