@@ -19,6 +19,7 @@ async def on_message(message):
         for word in content:
             if word in Config.BanWord:
                 await message.delete()
+                await message.author.send(f'{ message.author.name }, не стоит такое писать :)')
                 print('Automoderation working successfully')
     await Bot.process_commands(message)
 
