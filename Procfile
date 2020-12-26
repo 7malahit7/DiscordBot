@@ -1,1 +1,1 @@
-worker: pythonPowerDiscordBot.py and python ds2.py 
+worker: python PowerDiscordBot.py and python ds2.py 
