@@ -1,1 +1,1 @@
-worker: python PowerDiscordBot.py
+worker: start worker.bat
