@@ -1,1 +1,1 @@
-worker: start worker.bat
+worker: pythonPowerDiscordBot.py and python ds2.py 
