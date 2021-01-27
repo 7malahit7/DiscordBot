@@ -1,2 +1,1 @@
-worker: python PowerDiscordBot.py
-malahit: python ds2.py
+worker: python PowerDiscordBot.py && python ds2.py
