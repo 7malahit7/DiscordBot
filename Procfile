@@ -1,2 +1,2 @@
 worker: python PowerDiscordBot.py
-processor: python ds2.py
+malahit: python ds2.py
