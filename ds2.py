@@ -64,7 +64,7 @@ async def unmute(ctx, member: discord.Member ):
     await member.send(embed=emb)
     print(f"{member.name} UNmuted")
 
-@Bot.command()#Анмут
+@Bot.command()#Clear
 @commands.has_permissions( kick_members=True )
 async def clear(ctx, amount = 10):
     await ctx.channel.purge( limit = amount )
