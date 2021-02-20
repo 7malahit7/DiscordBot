@@ -28,13 +28,13 @@ async def on_message(message):
 
 @Bot.command()#Мут
 @commands.has_permissions( kick_members=True )
-async def mute(ctx, member: discord.Member, time:int,reason ):
+async def mute(ctx, member: discord.Member, time:int,reason,reason1="", reason2="",reason3="", reason4="" , reason5="", reason6="", reason7="", reason8=""):
     mute_role = discord.utils.get( ctx.message.guild.roles, id = 792454894417608744) #получаемая роль
     dmute_role = discord.utils.get( ctx.message.guild.roles, id = 790995360100515842) #удаляемая роль
     emb = discord.Embed(title="Мут", color = 0xff0000)
     emb.add_field(name="Moдератор", value=ctx.message.author.mention, inline=False)
     emb.add_field(name="Нарушитель", value=member.mention, inline=False)
-    emb.add_field(name="Причина", value=reason, inline = False)
+    emb.add_field(name="Причина", value=reason+" "+reason1+" "+reason2+" "+reason3+" "+reason4+" "+reason5+" "+reason6+" "+reason7+" "+reason8+" ", inline = False)
     emb.add_field(name="Время", value=time, inline=False)
     await member.send(embed=emb)
     await member.add_roles(mute_role)
