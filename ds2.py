@@ -67,7 +67,7 @@ async def unmute(ctx, member: discord.Member ):
 @Bot.command()#Clear
 @commands.has_permissions( kick_members=True )
 async def clear(ctx, amount):
-    await ctx.channel.purge( amount = amount + 1)
+    await ctx.channel.purge( limit = 20)
 
 
 #============ || start ||===============#
