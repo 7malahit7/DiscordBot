@@ -35,7 +35,7 @@ async def mute(ctx, member: discord.Member, time:int,reason,reason1="", reason2=
     emb.add_field(name="Moдератор", value=ctx.message.author.mention, inline=False)
     emb.add_field(name="Нарушитель", value=member.mention, inline=False)
     emb.add_field(name="Причина", value=reason+" "+reason1+" "+reason2+" "+reason3+" "+reason4+" "+reason5+" "+reason6+" "+reason7+" "+reason8+" ", inline = False)
-    emb.add_field(name="Время", value=time, inline=False)
+    emb.add_field(name="Время", value=time+' секунд', inline=False)
     await member.send(embed=emb)
     await member.add_roles(mute_role)
     await member.remove_roles(dmute_role)
