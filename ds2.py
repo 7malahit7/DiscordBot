@@ -28,28 +28,45 @@ async def on_message(message):
 
 @Bot.command()#Мут
 @commands.has_permissions( kick_members=True )
-async def mute(ctx, member: discord.Member, time:int,reason,reason1="", reason2="",reason3="", reason4="" , reason5="", reason6="", reason7="", reason8=""):
-    mute_role = discord.utils.get( ctx.message.guild.roles, id = 792454894417608744) #получаемая роль
-    dmute_role = discord.utils.get( ctx.message.guild.roles, id = 790995360100515842) #удаляемая роль
-    emb = discord.Embed(title="Мут", color = 0xff0000)
-    emb.add_field(name="Moдератор", value=ctx.message.author.mention, inline=False)
-    emb.add_field(name="Нарушитель", value=member.mention, inline=False)
-    emb.add_field(name="Причина", value=reason+" "+reason1+" "+reason2+" "+reason3+" "+reason4+" "+reason5+" "+reason6+" "+reason7+" "+reason8+" ", inline = False)
-    emb.add_field(name="Время", value=str(time)+' секунд', inline=False)
-    await member.send(embed=emb)
-    await member.add_roles(mute_role)
-    await member.remove_roles(dmute_role)
-    await ctx.send(embed=emb)
-    print(f"{member.name} muted")
-    emb1 = discord.Embed(title="Размут", color = 0x0afc37)
-    emb1.add_field(name = f'был размучен', value=member.mention, inline=False)
-    await asyncio.sleep(time)
-    await member.add_roles(dmute_role)
-    await member.remove_roles(mute_role)
-    await ctx.send(embed=emb1)
-    await member.send(embed=emb1)
-    print(f"{member.name} unmuted")
+async def mute(ctx, member: discord.Member, time:int,sec:str,reason1="Не указана", reason2="",reason3="", reason4="" , reason5="", reason6="", reason7="", reason8=""):
+    while True:
+        mute_role = discord.utils.get( ctx.message.guild.roles, id = 792454894417608744) #получаемая роль
+        dmute_role = discord.utils.get( ctx.message.guild.roles, id = 790995360100515842) #удаляемая роль
 
+        time1 = time
+        if sec == "s":
+            time,unit = time," секунд"
+        elif sec == "m":
+            time,unit = time*60," минут"
+        elif sec == "h":
+            time,unit = time*60*60," часов"
+        elif sec == "d":
+            time,unit = time*60*60*24," дней"
+        else:
+            emb2 = discord.Embed(title="Ошибка", color = 0xff0000)
+            emb2.add_field(name="Tupoy moder...", value="Вы не указали единицу измерения времени [ s / m / h / d ]", inline=False)
+            await ctx.send(embed=emb2)
+            break
+
+        emb = discord.Embed(title="Мут", color = 0xff0000)
+        emb.add_field(name="Moдератор", value=ctx.message.author.mention, inline=False)
+        emb.add_field(name="Нарушитель", value=member.mention, inline=False)
+        emb.add_field(name="Причина", value=reason1+" "+reason2+" "+reason3+" "+reason4+" "+reason5+" "+reason6+" "+reason7+" "+reason8+" ", inline = False)
+        emb.add_field(name="Время", value=str(time1)+unit, inline=False)
+        await member.send(embed=emb)
+        await member.add_roles(mute_role)
+        await member.remove_roles(dmute_role)
+        await ctx.send(embed=emb)
+        print(f"{member.name} muted")
+        emb1 = discord.Embed(title="Размут", color = 0x0afc37)
+        emb1.add_field(name = f'был размучен', value=member.mention, inline=False)
+        await asyncio.sleep(time)
+        await member.add_roles(dmute_role)
+        await member.remove_roles(mute_role)
+        await ctx.send(embed=emb1)
+        await member.send(embed=emb1)
+        print(f"{member.name} unmuted")
+        break
 
 @Bot.command()#Анмут
 @commands.has_permissions( kick_members=True )
@@ -66,11 +83,13 @@ async def unmute(ctx, member: discord.Member ):
 
 @Bot.command()#Анмут
 @commands.has_permissions( kick_members=True )
-async def clear(ctx, amount = 10):
+async def clear(ctx, amount = 20):
     amount = amount + 1
     await ctx.channel.purge( limit = amount )
+
 
 
 #============ || start ||===============#
 
 Bot.run(Config.Token)
+
