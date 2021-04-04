@@ -4,6 +4,7 @@ import Config
 from discord import utils
 from discord.ext import commands
 import asyncio
+import json
 #============ || main ||===============#
 
 Bot = commands.Bot( command_prefix = '.')
