@@ -1,0 +1,56 @@
+[
+    {
+        "role_name": "CS-GO \u0418\u0433\u0440\u043e\u043a",
+        "role_id": 791014649076252722,
+        "emoji": "\ud83d\udd2b",
+        "message_id": 828300722734497803
+    },
+    {
+        "role_name": "Fortnite \u0418\u0433\u0440\u043e\u043a",
+        "role_id": 791006805118418954,
+        "emoji": "\ud83d\udc35",
+        "message_id": 828300871267778591
+    },
+    {
+        "role_name": "Rust \u0418\u0433\u0440\u043e\u043a",
+        "role_id": 791018695278329917,
+        "emoji": "\u2622\ufe0f",
+        "message_id": 828301074057134081
+    },
+    {
+        "role_name": "RocketLeague \u0418\u0433\u0440\u043e\u043a",
+        "role_id": 791033779681624105,
+        "emoji": "\ud83d\ude80",
+        "message_id": 828301227510202398
+    },
+    {
+        "role_name": "Valorant \u0418\u0433\u0440\u043e\u043a",
+        "role_id": 791035184623517763,
+        "emoji": "\ud83d\udd3b",
+        "message_id": 828301498378092547
+    },
+    {
+        "role_name": "Minecraft \u0418\u0433\u0440\u043e\u043a",
+        "role_id": 791035707292516362,
+        "emoji": "\u26cf\ufe0f",
+        "message_id": 828301642700685342
+    },
+    {
+        "role_name": "DayZ \u0418\u0433\u0440\u043e\u043a",
+        "role_id": 812761056219758603,
+        "emoji": "\u2728",
+        "message_id": 828301778210127872
+    },
+    {
+        "role_name": "AmongUs \u0418\u0433\u0440\u043e\u043a",
+        "role_id": 791016886418538526,
+        "emoji": "\u2602\ufe0f",
+        "message_id": 828301977091440730
+    },
+    {
+        "role_name": "\u041a\u0435\u043f\u043a\u0430",
+        "role_id": 790995360100515842,
+        "emoji": "\ud83d\ude3c",
+        "message_id": 828302958722416640
+    }
+]
