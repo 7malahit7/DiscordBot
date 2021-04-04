@@ -7,7 +7,7 @@ import asyncio
 import json
 #============ || main ||===============#
 
-Bot = commands.Bot( command_prefix = '.')
+Bot = commands.Bot( command_prefix = '.', intents = discord.Intents.all())
 
 @Bot.event #включение
 async def on_ready():
