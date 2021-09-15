@@ -64,9 +64,8 @@ async def mute(ctx, member: discord.Member, time:int,sec:str,reason1="Не ук�
         emb1.add_field(name = f'был размучен', value=member.mention, inline=False)
         emb1.set_image(url="https://img.icons8.com/office/344/speaker.png")
 
-[Фотография]
 
-https://vk.com/photo506605696_457257618
+
         await asyncio.sleep(time)
         await member.add_roles(dmute_role)
         await member.remove_roles(mute_role)
@@ -84,9 +83,9 @@ async def unmute(ctx, member: discord.Member ):
     emb.add_field(name = 'Был досроно размучен', value = member.mention)
     emb.set_image(url="https://img.icons8.com/office/344/speaker.png")
 
-[Фотография]
 
-https://vk.com/photo506605696_457257618
+
+
     await member.add_roles(mute_role)
     await member.remove_roles(dmute_role)
     await ctx.send(embed=emb)
