@@ -54,6 +54,7 @@ async def mute(ctx, member: discord.Member, time:int,sec:str,reason1="Не ук�
         emb.add_field(name="Нарушитель", value=member.mention, inline=False)
         emb.add_field(name="Причина", value=reason1+" "+reason2+" "+reason3+" "+reason4+" "+reason5+" "+reason6+" "+reason7+" "+reason8+" ", inline = False)
         emb.add_field(name="Время", value=str(time1)+unit, inline=False)
+        emb.set_image(url="https://img.icons8.com/office/452/mute--v1.png")
         await member.send(embed=emb)
         await member.add_roles(mute_role)
         await member.remove_roles(dmute_role)
