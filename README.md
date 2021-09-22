@@ -1,1 +1,3 @@
 # malahitdisc
+
+для heroku.com
